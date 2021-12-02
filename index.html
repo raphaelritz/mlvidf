@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Mailinglist Volt IdF</title>
+<link rel="shortcut icon" type="image/jpg" href="https://www.volteuropa.org/favicon.ico"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  user-select: none;
+}
+.box1 {
+  width: 450px;
+  height: 500px;
+  border: 0.5px solid #cccccc;
+  display: block;
+  margin-top: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+}
+.box3 {
+  width:350px;
+  height: 55px;
+  border: 0.5px solid #cccccc;
+  display: block;
+  margin-top: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+  transition: 0.3s;
+  padding-left: 15px;
+}
+.email {
+  width:350px;
+  height: 55px;
+  border: 0px;
+  background-color: rgba(0, 0, 0, 0);
+  outline-width: 0px;
+  font-family: "Arial";
+  font-size: 16.5;
+  color:rgb(70, 70, 70);
+  position: relative;
+  z-index: 1;
+}
+.box3:focus-within {
+  border: 0.5px solid #54247c;
+  transition: 0.3s;
+}
+.volt_logo {
+  margin-top: 35px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90px;
+  height: 90px;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+.envoyer {
+  display: block;
+  font-family: "Arial";
+  font-weight: bold;
+  font-size: 15px;
+  color: #54247c;
+  letter-spacing: 1px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  border: 1px solid #54247c;
+  float: none;
+  margin: 0 auto;
+  margin-top: 30px;
+  height: 40px;
+  width: 100px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.envoyer:hover {
+  background-color: #54247c;
+  color:#ffffff;
+  transition: 0.3s;
+}
+h1 {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  font-family: 'Arial';
+  font-weight: lighter;
+  font-size: 30px;
+  color: rgb(70, 70, 70);
+}
+h2 {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  font-family: 'Arial';
+  font-weight: lighter;
+  font-size: 17px;
+  color: rgb(50, 50, 50);
+}
+label {
+  font-family: Arial;
+  background-color: #ffffff;
+  color: rgb(110, 110, 110);
+  font-size: 16.5px;
+  float: left;
+  transform: translateY(-39px);
+  user-select: none;
+  transition: 0.2s;
+}
+.email:focus ~ label {
+  color: #54247c;
+  font-size: 13px;
+  transform: translateY(-66.5px);
+  user-select: none;
+  transition: 0.2s;
+}
+.email:not(:placeholder-shown):not(:focus) ~ label {
+  color: rgb(110, 110, 110);
+  font-size: 13px;
+  transform: translateY(-66.5px);
+  user-select: none;
+  transition: 0.2s;
+}
+
+</style>
+</head>
+<body>
+
+<div class="box1">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Logo_Volt_Europa.svg" alt="volteuropa" class="volt_logo">
+
+<h1>Bienvenue,</h1>
+<h2>Veuillez insérer vos adresses email<br/>pour rejoindre la mailinglist de Fanny!</h2>
+
+<form action="/process.php" method="POST">
+<div class="box3" >
+  <input class="email" type="email" name="P_mail" required autocomplete="off" placeholder=" ">
+<label onclick="return false">&nbspEmail perso&nbsp</label>
+</div>
+<div class="box3" >
+  <input class="email" type="email" name="V_mail" required autocomplete="off" placeholder=" ">
+<label onclick="return false">&nbspEmail @volteuropa.org&nbsp</label>
+</div>
+<input type="submit" value="Envoyer" class="envoyer">
+</form>
+</body>
+</html>
